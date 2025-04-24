@@ -22,118 +22,118 @@ const getEventBYId = async (req, res)=>{
   }
 };
 
-// const Login = async (req, res) =>{
-//   try {
-//     const { email, password } = req.body;
+const Login = async (req, res) =>{
+  try {
+    const { email, password } = req.body;
 
-//     const user = await User.findOne({ email });
+    const user = await User.findOne({ email });
 
-//     if(!user) {
-//       return res.status(404).json({message: 'Invalid credentials'});
-//     }
-//     const isPasswordCorrect = await bcrypt.compare(password, user.password);
+    if(!user) {
+      return res.status(404).json({message: 'Invalid credentials'});
+    }
+    const isPasswordCorrect = await bcrypt.compare(password, user.password);
 
-//     if(!isPasswordCorrect) {
-//       return res.status(404).json({message: 'Invalid credentials'});
-//     }
+    if(!isPasswordCorrect) {
+      return res.status(404).json({message: 'Invalid credentials'});
+    }
 
-//     const token = jwt.Login({userId: user._id}, process.env.JWT_SECRET, {expiresIn: '1d'});
-//     res.status(200).json({
-//       message: 'Login successful',
-//       token,
-//       user:{
-//         id: user._id,
-//         email: user.email,
-//         username: user.username
-//       }
-//     })
-//   } catch (error) {
-//     res.status(500).json({ message: 'Error logging in', error: error.message})
-//   }
-// }
+    const token = jwt.Login({userId: user._id}, process.env.JWT_SECRET, {expiresIn: '1d'});
+    res.status(200).json({
+      message: 'Login successful',
+      token,
+      user:{
+        id: user._id,
+        email: user.email,
+        username: user.username
+      }
+    })
+  } catch (error) {
+    res.status(500).json({ message: 'Error logging in', error: error.message})
+  }
+}
 
-// const signup = async (req, res) =>{
-//   try {
-//     const { username, email, password } = req.body;
+const signup = async (req, res) =>{
+  try {
+    const { username, email, password } = req.body;
 
-//     const existingUser = await User.findOne({ email });
-//     if(existingUser) {
-//       return res.status(400).json({message: 'Email already exists'});
-//     }
+    const existingUser = await User.findOne({ email });
+    if(existingUser) {
+      return res.status(400).json({message: 'Email already exists'});
+    }
 
-//     const hashedPassword = await bcrypt.hash(password, 10);
+    const hashedPassword = await bcrypt.hash(password, 10);
 
-//     const newUser = new User({
-//       username,
-//       email,
-//       password: hashedPassword,
-//     });
+    const newUser = new User({
+      username,
+      email,
+      password: hashedPassword,
+    });
 
-//     const savedUser = await newUser.save();
+    const savedUser = await newUser.save();
 
-//     const token = jwt.sign({userId: savedUser._id}, process.env.JWT_SECRET, {expiresIn: '1h'});
+    const token = jwt.sign({userId: savedUser._id}, process.env.JWT_SECRET, {expiresIn: '1h'});
 
-//     res.status(201).json({
-//       message: 'user created successfully',
-//       token,
-//       user: {
-//         id: savedUser._id,
-//         email: savedUser.email,
-//         username: savedUser.username
-//       }
-//     })
-//   } catch (error) {
-//     res.status(500).json({ message: 'Error creating user', error: error.message})
-//   }
-// }
-
-
-// const createEvent = async (req, res) =>{
-//   try{
-//     const { title, Date, location, availableSeats, description } = req.body;
-
-//     const newEvent = new Event({
-//       title,
-//       Date,
-//       location,
-//       availableSeats,
-//       description
-//     });
-
-//     const savedEvent = await newEvent.save();
-//     res.status(201).json(savedEvent);
-//   } catch(error) {
-//     res.status(500).json({message: 'Error creating event', error: error.message});
-//   }
-// };
+    res.status(201).json({
+      message: 'user created successfully',
+      token,
+      user: {
+        id: savedUser._id,
+        email: savedUser.email,
+        username: savedUser.username
+      }
+    })
+  } catch (error) {
+    res.status(500).json({ message: 'Error creating user', error: error.message})
+  }
+}
 
 
-// const updateEvent = async (req, res) => {
-//   const { id } = req.params
-//   const { title, Date, location, availableSeats, description } = req.body
+const createEvent = async (req, res) =>{
+  try{
+    const { title, Date, location, availableSeats, description } = req.body;
 
-//   try {
-//     const updatedEvent = await Event.findByIdAndUpdated(
-//       id,
-//       {title, Date, location, availableSeats, description},
-//       {new: true, runValidators: true}
-//     );
+    const newEvent = new Event({
+      title,
+      Date,
+      location,
+      availableSeats,
+      description
+    });
 
-//     if(!updatedEvent) {
-//       res.status(404).json({message: 'Event not found'});
-//     }
+    const savedEvent = await newEvent.save();
+    res.status(201).json(savedEvent);
+  } catch(error) {
+    res.status(500).json({message: 'Error creating event', error: error.message});
+  }
+};
 
-//     res.status(200).json(updatedEvent);
-//   } catch (error) {
-//     res.status(500).json({message: 'Error updating event', error: error.message})
-//   }
-// };
+
+const updateEvent = async (req, res) => {
+  const { id } = req.params
+  const { title, Date, location, availableSeats, description } = req.body
+
+  try {
+    const updatedEvent = await Event.findByIdAndUpdated(
+      id,
+      {title, Date, location, availableSeats, description},
+      {new: true, runValidators: true}
+    );
+
+    if(!updatedEvent) {
+      res.status(404).json({message: 'Event not found'});
+    }
+
+    res.status(200).json(updatedEvent);
+  } catch (error) {
+    res.status(500).json({message: 'Error updating event', error: error.message})
+  }
+};
 
 module.exports= {
   getAllEvents,
   getEventBYId,
-  // createEvent,
-  // Login,
-  // signup
+  createEvent,
+  Login,
+  signup
   // updateEvent
 }
