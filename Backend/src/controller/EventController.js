@@ -103,7 +103,7 @@ const createEvent = async (req, res) =>{
       description
     });
 
-    const savedEvent = await Event.save();
+    const savedEvent = await newEvent.save();
     res.status(201).json(savedEvent);
   } catch(error) {
     res.status(500).json({message: 'Error creating event', error: error.message});
@@ -113,12 +113,12 @@ const createEvent = async (req, res) =>{
 
 const updateEvent = async (req, res) => {
   const { id } = req.params
-  const { title, Date, location, availableSeats, description } = req.body
+  
 
   try {
     const updatedEvent = await Event.findByIdAndUpdate(
       id,
-      {title, Date, location, availableSeats, description},
+      req.body,
       {new: true, runValidators: true}
     );
 
