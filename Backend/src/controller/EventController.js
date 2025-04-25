@@ -134,6 +134,6 @@ module.exports= {
   getEventBYId,
   createEvent,
   Login,
-  signup
-  // updateEvent
+  signup,
+  updateEvent
 }
