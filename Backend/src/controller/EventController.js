@@ -1,4 +1,7 @@
 const Event = require('../Models/Event');
+const User = require('../Models/user');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 const getAllEvents = async (req, res) => {
   try{
@@ -100,7 +103,7 @@ const createEvent = async (req, res) =>{
       description
     });
 
-    const savedEvent = await newEvent.save();
+    const savedEvent = await Event.save();
     res.status(201).json(savedEvent);
   } catch(error) {
     res.status(500).json({message: 'Error creating event', error: error.message});
@@ -113,7 +116,7 @@ const updateEvent = async (req, res) => {
   const { title, Date, location, availableSeats, description } = req.body
 
   try {
-    const updatedEvent = await Event.findByIdAndUpdated(
+    const updatedEvent = await Event.findByIdAndUpdate(
       id,
       {title, Date, location, availableSeats, description},
       {new: true, runValidators: true}
