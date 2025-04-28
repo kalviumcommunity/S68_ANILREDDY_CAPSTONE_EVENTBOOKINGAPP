@@ -1,3 +1,4 @@
+PUTREQUESTAPI
 ## Update Event API (PUT Request) ##
 
 This API endpoint allows you to update the details of an existing event using its unique identifier. The endpoint expects a PUT request to the URL path /events/:id, where :id is the ID of the event you want to update. In the request body, you can provide updated values for the event's properties such as title, Date, location, availableSeats, and description
