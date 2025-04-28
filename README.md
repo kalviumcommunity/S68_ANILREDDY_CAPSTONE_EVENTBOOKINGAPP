@@ -1,5 +1,111 @@
-## Capstone project ##
+ ### Capstone Project Roadmap
+ 
+## Event Ease
 
+Concept:Event Ease is a full-stack event booking platform that enables users to browse events, select seats, and book tickets effortlessly. It features user authentication (JWT), event management, seat selection, booking confirmation, and optional payment integration (Stripe/PayPal).
+
+Users can view available events, reserve seats, and track their bookings via a personalized dashboard. Admins have access to an admin panel for managing events, bookings, and users. Built with React (frontend), Node.js & Express (backend), and MongoDB (database), Event Ease ensures a secure, scalable, and user-friendly experience, making event reservations simple and efficient for both attendees and organizers.
+
+Tech Stack:
+Frontend → React.js + Vite (for fast, interactive UI)
+Backend → Node.js + Express.js (for handling API requests)
+Database → MongoDB + Mongoose (for storing users, events, and bookings)
+Authentication → JWT (JSON Web Token) (for secure login/signup)
+UI Styling → Tailwind CSS (for responsive design)
+State Management → React Hooks (useState, useEffect, useContext)
+Routing → React Router (for navigation)
+API Requests → Axios (for fetching & sending data)
+Storage → Firebase (for event images and assets)
+Payment Integration (Optional) → Stripe/PayPal (for secure transactions)
+
+Daily Plans
+
+Day 1: Ideation & Research
+Brainstorm ideas and define core features (Event management, Seat booking, Payments, etc.).
+Research competitors and identify unique selling points.
+
+Day 2: Feature Finalization & Project Structure
+Finalize feature set (Admin panel, User dashboard, Booking system).
+Decide frontend, backend, and database architecture.
+Create user flow diagrams & database schema.
+
+Day 3: Low-Fidelity Wireframes (Figma)
+Design low-fidelity wireframes for key pages (Home, Event details, Booking page).
+Identify main UI components.
+
+Day 4: High-Fidelity UI Design (Figma)
+Start designing the high-fidelity UI for a polished look.
+Work on color schemes, typography, and branding.
+
+Day 5: Complete High-Fidelity UI & GitHub Setup
+Finish high-fidelity UI.
+Set up GitHub repository for version control.
+Initialize frontend (React + Vite) and backend (Node.js + Express).
+
+Day 6: Backend Setup & User Authentication
+Set up Node.js + Express server.
+Connect MongoDB database (Mongoose ORM).
+Implement JWT-based authentication (Signup, Login, Logout).
+
+Day 7: Event Management API
+Create Event model (title, date, venue, available seats, etc.).
+Build CRUD APIs for events (Create, Read, Update, Delete).
+
+Day 8: Seat Booking & Reservation API
+Develop seat selection logic (check availability, reserve seats).
+Create Booking model (user, event, selected seats, payment status).
+Implement booking API endpoints.
+
+Day 9: Admin Panel API
+Build APIs for admin controls (manage events, view bookings).
+Implement middleware to restrict access to admin routes.
+
+Day 10: API Testing & Optimization
+Test authentication, event, and booking APIs using Postman.
+Optimize database queries & handle errors properly.
+
+Day 11: Frontend Setup & Authentication
+Set up React + Vite.
+Implement user authentication (Signup/Login UI).
+
+Day 12: Event Listing & Details Page
+Display events fetched from the backend.
+Implement Event Details page with seat availability.
+
+Day 13: Seat Selection & Booking UI
+Design seat selection layout.
+Allow users to select and reserve seats.
+
+Day 14: User Dashboard & Booking History
+Implement User Dashboard to view past/upcoming bookings.
+Fetch user bookings from backend API.
+
+Day 15: Admin Panel UI
+Create an Admin Dashboard for managing events & bookings.
+Ensure only admins can access admin routes.
+
+Day 16: UI Testing & Fixing Bugs
+Test the entire frontend flow.
+Fix UI bugs and ensure mobile responsiveness.
+
+Day 17: Stripe/PayPal Integration
+Integrate Stripe/PayPal for online payments.
+Ensure booking status updates to "Paid" upon successful transaction.
+
+Day 18: Full System Testing
+Test end-to-end flow (Login → Browse Events → Book Seats → Payment → Confirmation).
+Fix bugs and performance issues.
+
+Day 19: Deployment
+Deploy backend (Render/Vercel).
+Deploy frontend (Vercel/Netlify).
+Use MongoDB Atlas for database hosting.
+
+Day 20: Final QA & Launch 
+Perform final testing on different devices & browsers.
+Launch the project & collect user feedback.
+
+## Capstone project ##
 
 ## GET REQUEST API ##
 
