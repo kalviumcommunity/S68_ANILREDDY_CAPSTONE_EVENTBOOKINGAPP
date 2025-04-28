@@ -1,4 +1,4 @@
-## Capstone project ##
+<!-- ## Capstone project ##
 
 
 ## GET REQUEST API ##
@@ -47,7 +47,7 @@ This GET /events router is used to retrieve the list of all events available in 
     "availableSeats": 200,
     "description": "A conference on the latest in technology."
   }
-]
+] -->
 
 <!-- ## POST REQUEST API ##
 
@@ -128,3 +128,25 @@ Schema Fields:
   "createdAt": "2025-04-28T10:15:37.000Z",
   "updatedAt": "2025-04-28T10:15:37.000Z"
 }  -->
+
+
+## Initialized a react/frontend application ##
+
+# React Frontend Application
+
+This project is a React.js frontend application initialized with [Vite](https://vitejs.dev/) and styled using [Tailwind CSS](https://tailwindcss.com/).
+
+##  Project Setup
+
+### 1. Clone the repository
+bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+
+### 2. Install dependencies
+
+npm install
+
+### 3. Start the development server
+
+npm run dev
