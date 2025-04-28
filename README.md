@@ -1,4 +1,4 @@
-<!-- ## Capstone project ##
+## Capstone project ##
 
 
 ## GET REQUEST API ##
@@ -49,7 +49,7 @@ This GET /events router is used to retrieve the list of all events available in 
   }
 ]
 
-## POST REQUEST API ##
+<!-- ## POST REQUEST API ##
 
 This POST /signup router handles user registration for the Event Booking Website. When users submit their details (username, email, and password), this router will pass the data to the signup controller, which processes the request by checking the uniqueness of the email, hashing the password, and saving the new user to the database.
 
@@ -91,7 +91,7 @@ This API endpoint allows you to update the details of an existing event using it
 https://s68-anilreddy.onrender.com/ -->
 
 
- ## Mongoose Schema Documentation ##
+ <!-- ## Mongoose Schema Documentation ##
 
  Event Schema
 The Event schema is designed to store all necessary details about an event that users can browse and book.
@@ -127,4 +127,4 @@ Schema Fields:
   "description": "Experience an unforgettable night with top international bands!",
   "createdAt": "2025-04-28T10:15:37.000Z",
   "updatedAt": "2025-04-28T10:15:37.000Z"
-} 
+}  -->
