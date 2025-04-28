@@ -1,3 +1,4 @@
+ Databaseschemacreated
 <!-- ## Capstone project ##
 
 
@@ -127,4 +128,6 @@ Schema Fields:
   "description": "Experience an unforgettable night with top international bands!",
   "createdAt": "2025-04-28T10:15:37.000Z",
   "updatedAt": "2025-04-28T10:15:37.000Z"
+  }
 } 
+
