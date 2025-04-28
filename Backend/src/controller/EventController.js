@@ -1,4 +1,7 @@
 const Event = require('../Models/Event');
+const User = require('../Models/user');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 const getAllEvents = async (req, res) => {
   try{
@@ -110,12 +113,12 @@ const createEvent = async (req, res) =>{
 
 const updateEvent = async (req, res) => {
   const { id } = req.params
-  const { title, Date, location, availableSeats, description } = req.body
+  
 
   try {
-    const updatedEvent = await Event.findByIdAndUpdated(
+    const updatedEvent = await Event.findByIdAndUpdate(
       id,
-      {title, Date, location, availableSeats, description},
+      req.body,
       {new: true, runValidators: true}
     );
 
@@ -134,6 +137,6 @@ module.exports= {
   getEventBYId,
   createEvent,
   Login,
-  signup
-  // updateEvent
+  signup,
+  updateEvent
 }

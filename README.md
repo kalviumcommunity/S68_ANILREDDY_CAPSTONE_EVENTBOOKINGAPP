@@ -1,3 +1,4 @@
+POSTREQUESTAPI
  ## POST REQUEST API ##
 
 This POST /signup router handles user registration for the Event Booking Website. When users submit their details (username, email, and password), this router will pass the data to the signup controller, which processes the request by checking the uniqueness of the email, hashing the password, and saving the new user to the database.
@@ -17,3 +18,5 @@ This POST /signup router handles user registration for the Event Booking Website
 6.After processing the request, the router sends a response back to the client.
 
 7.Success responses return the user data (excluding the password), while error responses explain what went wrong (e.g., email already exists or internal server error).
+
+ 
