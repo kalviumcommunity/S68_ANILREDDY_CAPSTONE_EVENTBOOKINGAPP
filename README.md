@@ -1,5 +1,5 @@
- Databaseschemacreated
-<!-- ## Capstone project ##
+ 
+ ## Capstone project ##
 
 
 ## GET REQUEST API ##
@@ -50,7 +50,7 @@ This GET /events router is used to retrieve the list of all events available in 
   }
 ]
 
-## POST REQUEST API ##
+--> ## POST REQUEST API ##
 
 This POST /signup router handles user registration for the Event Booking Website. When users submit their details (username, email, and password), this router will pass the data to the signup controller, which processes the request by checking the uniqueness of the email, hashing the password, and saving the new user to the database.
 
@@ -130,4 +130,4 @@ Schema Fields:
   "updatedAt": "2025-04-28T10:15:37.000Z"
   }
 } 
-
+-->
