@@ -1,5 +1,5 @@
 
-<!--## Capstone project ##
+## Capstone project ##
 
  ### Capstone Project Roadmap
  
@@ -193,9 +193,9 @@ This API endpoint allows you to update the details of an existing event using it
 
 5.This API enables clients to modify one or multiple fields of an existing event such as changing the title, date, location, available seats, or description.
 
-6.On successful update, the API returns a 200 status code and the updated event object in JSON format. -->
+6.On successful update, the API returns a 200 status code and the updated event object in JSON format. 
  
-<!-- ## Deployed backend server ##
+ ## Deployed backend server ##
 
 https://s68-anilreddy.onrender.com/ 
 
@@ -258,7 +258,7 @@ npm install
 
 ### 3. Start the development server
 
-npm run dev Deployedfrontendserver -->
+npm run dev Deployedfrontendserver 
 
 
 ## Deployed frontend server ##
