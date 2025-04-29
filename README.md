@@ -1,4 +1,4 @@
-<!-- ## Capstone project ##
+## Capstone project ##
 
 
 ## GET REQUEST API ##
@@ -47,9 +47,9 @@ This GET /events router is used to retrieve the list of all events available in 
     "availableSeats": 200,
     "description": "A conference on the latest in technology."
   }
-] -->
+]
 
-<!-- ## POST REQUEST API ##
+## POST REQUEST API ##
 
 This POST /signup router handles user registration for the Event Booking Website. When users submit their details (username, email, and password), this router will pass the data to the signup controller, which processes the request by checking the uniqueness of the email, hashing the password, and saving the new user to the database.
 
@@ -85,13 +85,13 @@ This API endpoint allows you to update the details of an existing event using it
 5.This API enables clients to modify one or multiple fields of an existing event such as changing the title, date, location, available seats, or description.
 
 6.On successful update, the API returns a 200 status code and the updated event object in JSON format. -->
-<!-- 
+ 
 ## Deployed backend server ##
 
 https://s68-anilreddy.onrender.com/ -->
 
 
- <!-- ## Mongoose Schema Documentation ##
+ ## Mongoose Schema Documentation ##
 
  Event Schema
 The Event schema is designed to store all necessary details about an event that users can browse and book.
@@ -127,7 +127,7 @@ Schema Fields:
   "description": "Experience an unforgettable night with top international bands!",
   "createdAt": "2025-04-28T10:15:37.000Z",
   "updatedAt": "2025-04-28T10:15:37.000Z"
-}  -->
+} 
 
 
 ## Initialized a react/frontend application ##
@@ -150,3 +150,8 @@ npm install
 ### 3. Start the development server
 
 npm run dev
+
+
+## Deployed frontend server ##
+
+https://s68-anilreddy-capstone-eventbookingapp.vercel.app/
