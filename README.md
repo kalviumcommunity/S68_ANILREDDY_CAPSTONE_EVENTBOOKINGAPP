@@ -1,3 +1,6 @@
+
+<!--## Capstone project ##
+
  ### Capstone Project Roadmap
  
 ## Event Ease
@@ -192,9 +195,9 @@ This API endpoint allows you to update the details of an existing event using it
 
 6.On successful update, the API returns a 200 status code and the updated event object in JSON format. -->
  
-## Deployed backend server ##
+<!-- ## Deployed backend server ##
 
-https://s68-anilreddy.onrender.com/ -->
+https://s68-anilreddy.onrender.com/ 
 
 
  ## Mongoose Schema Documentation ##
@@ -255,4 +258,11 @@ npm install
 
 ### 3. Start the development server
 
-npm run dev
+npm run dev Deployedfrontendserver -->
+
+
+## Deployed frontend server ##
+
+https://s68-anilreddy-capstone-eventbookingapp.vercel.app/
+
+
