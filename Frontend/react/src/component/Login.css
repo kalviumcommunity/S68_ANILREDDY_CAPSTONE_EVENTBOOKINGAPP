@@ -1,0 +1,314 @@
+/* Updated Login.css with styles matching your provided design */
+
+* {
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Add this background image with a light overlay for readability */
+  background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+                    url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+  
+
+.login-wrapper {
+  max-width: 360px;
+  margin: 3rem auto;
+  background: white;
+  border-radius: 32px;
+  padding: 3rem 2.5rem 3rem 2.5rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.login-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.logo-icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 0.6rem;
+}
+
+.login-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #222222;
+}
+
+.signin-text {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 1.8rem;
+  align-self: flex-start;
+  color: #222222;
+}
+
+.error-message {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.input-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #f8f8fb;
+  border: none;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1.25rem;
+  color: #6b7280;
+  font-size: 1rem;
+  cursor: text;
+  box-shadow: 0 3px 6px rgba(102, 102, 255, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.input-label:focus-within {
+  box-shadow: 0 4px 8px rgba(102, 102, 255, 0.4);
+}
+
+.input-icon {
+  margin-right: 0.75rem;
+  font-size: 1.3rem;
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.input-field {
+  border: none;
+  background: transparent;
+  flex-grow: 1;
+  font-size: 1rem;
+  outline: none;
+  color: #111827;
+  font-weight: 500;
+}
+
+.password-toggle-btn {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  flex-shrink: 0;
+  outline: none;
+}
+
+.options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.95rem;
+  color: #222222;
+  font-weight: 600;
+}
+
+.remember-me input {
+  margin-right: 0.5rem;
+  width: 32px;
+  height: 16px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #e5e7eb;
+  border-radius: 8px;
+  position: relative;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.remember-me input:checked {
+  background-color: #6666ff;
+}
+
+.remember-me input:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  top: 0;
+  left: 0;
+  background: white;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+
+.remember-me input:checked:before {
+  transform: translateX(16px);
+}
+
+.forgot-password-btn {
+  background: none;
+  border: none;
+  color: #6666ff;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: none;
+  user-select: none;
+  padding: 0;
+  outline: none;
+}
+
+.forgot-password-btn:hover,
+.forgot-password-btn:focus {
+  text-decoration: underline;
+}
+
+.btn-signin {
+  background: #6666ff;
+  color: white;
+  border: none;
+  border-radius: 32px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 0.95rem 1.5rem;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 12px 20px rgba(102, 102, 255, 0.5);
+  transition: background-color 0.3s ease;
+  user-select: none;
+  text-transform: uppercase;
+}
+
+.btn-signin:hover,
+.btn-signin:focus {
+  background: #4f46e5;
+  outline: none;
+}
+
+.arrow {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-left: 0.8rem;
+}
+
+.divider {
+  margin: 2.2rem 0 1.5rem 0;
+  width: 100%;
+  text-align: center;
+  color: #9ca3af;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  font-size: 0.85rem;
+  user-select: none;
+}
+
+.btn-google,
+.btn-facebook {
+  border: none;
+  background: white;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 18px;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.05);
+}
+
+.btn-google {
+  color: #ea4335;
+}
+
+.btn-google:hover,
+.btn-google:focus {
+  background-color: #fef2f2;
+  box-shadow: 0 6px 20px rgb(234 67 53 / 0.2);
+  outline: none;
+}
+
+.btn-facebook {
+  color: #1877f2;
+}
+
+.btn-facebook:hover,
+.btn-facebook:focus {
+  background-color: #eff6ff;
+  box-shadow: 0 6px 20px rgb(24 119 242 / 0.2);
+  outline: none;
+}
+
+.btn-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  color: inherit;
+}
+
+.signup-text {
+  font-size: 0.95rem;
+  color: #6b7280;
+  text-align: center;
+  user-select: none;
+  margin-top: 1rem;
+}
+
+.signup-link {
+  color: #6666ff;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 0.3rem;
+}
+
+.signup-link:hover,
+.signup-link:focus {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .login-wrapper {
+    margin: 1.5rem;
+    padding: 2rem 1.5rem 2.5rem 1.5rem;
+    max-width: 100%;
+  }
+}
